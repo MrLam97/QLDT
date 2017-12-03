@@ -27,11 +27,6 @@ namespace QuanLyCHDT
             cbbHangsx.ValueMember = "MaH";
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-            groupBox2.Enabled = true;
-        }
-
         private void btnThemH_Click(object sender, EventArgs e)
         {
             cbbHangsx.DropDownStyle = ComboBoxStyle.Simple;
