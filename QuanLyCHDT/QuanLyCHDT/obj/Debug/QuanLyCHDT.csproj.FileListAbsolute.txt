@@ -65,3 +65,6 @@ D:\Project VS\QuanLyCHDT\QuanLyCHDT\bin\Debug\es\DevExpress.XtraLayout.v17.1.res
 D:\Project VS\QuanLyCHDT\QuanLyCHDT\bin\Debug\ja\DevExpress.XtraLayout.v17.1.resources.dll
 D:\Project VS\QuanLyCHDT\QuanLyCHDT\bin\Debug\ru\DevExpress.XtraLayout.v17.1.resources.dll
 D:\Project VS\QuanLyCHDT\QuanLyCHDT\obj\Debug\QuanLyCHDT.Frm_HangSX.resources
+D:\git1\QLDT\QuanLyCHDT\QuanLyCHDT\bin\Debug\QuanLyCHDT.exe.config
+D:\git1\QLDT\QuanLyCHDT\QuanLyCHDT\obj\Debug\QuanLyCHDT.exe
+D:\git1\QLDT\QuanLyCHDT\QuanLyCHDT\obj\Debug\QuanLyCHDT.pdb
