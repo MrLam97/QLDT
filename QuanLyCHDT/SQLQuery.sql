@@ -59,4 +59,5 @@ insert into LoaiMay values(@MaM,@MaH,@TenM,@Gia,@SoLuongTon,@TGBH,@DungLuong)
 end
 go
 -------------------------xuất máy
+-------------------------Bán máy
 
