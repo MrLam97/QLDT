@@ -113,17 +113,18 @@ namespace DAO
             return dt;
         }
     }
+
     public class tblLoaiMay_DAO
     {
         public static void NhapLoaiMay(tblLoaiMay lm)
         {
             SqlConnection conn = KetnoiCSDL.Hamketnoi();
-            SqlCommand cmd = new SqlCommand("NhapMay",conn);
+            SqlCommand cmd = new SqlCommand("NhapMay", conn);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add("@MaM",SqlDbType.NVarChar,20);
+            cmd.Parameters.Add("@MaM", SqlDbType.NVarChar, 20);
             cmd.Parameters.Add("@MaH", SqlDbType.NVarChar, 20);
             cmd.Parameters.Add("@TenM", SqlDbType.NVarChar, 20);
-            cmd.Parameters.Add("@Gia",SqlDbType.Money);
+            cmd.Parameters.Add("@Gia", SqlDbType.Money);
             cmd.Parameters.Add("@SoLuongTon", SqlDbType.Int);
             cmd.Parameters.Add("@TGBH", SqlDbType.Int);
             cmd.Parameters.Add("@DungLuong", SqlDbType.Int);
@@ -140,6 +141,132 @@ namespace DAO
             cmd.ExecuteNonQuery();
             conn.Close();
 
+        }
+
+        public static DataTable HienLoaiMay()
+        {
+            SqlConnection conn = KetnoiCSDL.Hamketnoi();
+            SqlCommand cmd = new SqlCommand("XuatTTMay", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            conn.Open();
+            SqlDataAdapter da = new SqlDataAdapter();
+            DataTable dt = new DataTable();
+            da.SelectCommand = cmd;
+            da.Fill(dt);
+            conn.Close();
+            return dt;
+        }
+
+        public static int SoLuongTon(string MaM)
+        {
+            SqlConnection conn = KetnoiCSDL.Hamketnoi();
+            SqlCommand cmd = new SqlCommand("SoLuongTon", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@MaM", SqlDbType.NVarChar, 20);
+            cmd.Parameters["@MaM"].Value = MaM;
+            conn.Open();
+            int n = (int)cmd.ExecuteScalar();
+            conn.Close();
+            return n;
+        }
+
+        public static void CapNhatSLT(int SLT, string MaMay)
+        {
+            SqlConnection conn = KetnoiCSDL.Hamketnoi();
+            SqlCommand cmd = new SqlCommand("CapNhatSLT", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@SoLuongTon", SqlDbType.Int);
+            cmd.Parameters.Add("@MaM", SqlDbType.NVarChar, 20);
+
+            cmd.Parameters["@SoLuongTon"].Value = SLT;
+            cmd.Parameters["@MaM"].Value = MaMay;
+
+            conn.Open();
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
+
+        public static bool KiemTraMaM(string _MaM)
+        {
+            bool check = false;
+            SqlConnection conn = KetnoiCSDL.Hamketnoi();
+            string sql = "Select * from LoaiMay where MaM='" + _MaM + "'";
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            cmd.CommandType = CommandType.Text;
+            conn.Open();
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.Read())
+                check = true;
+            return check;
+        }
+
+        public static DataTable LayDL()
+        {
+            SqlConnection conn = KetnoiCSDL.Hamketnoi();
+            SqlCommand cmd = new SqlCommand("LayDL",conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            conn.Open();
+            SqlDataAdapter da = new SqlDataAdapter();
+            DataTable dt = new DataTable();
+            da.SelectCommand = cmd;
+            da.Fill(dt);
+            conn.Close();
+            return dt;
+        }
+
+       
+    }
+
+    public class tblChiTietMay_DAO
+    {
+        public static void NhapCTMay(tblChiTietMay CTM)
+        {
+            SqlConnection conn = KetnoiCSDL.Hamketnoi();
+            SqlCommand cmd = new SqlCommand("NhapCTMay", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            
+            cmd.Parameters.Add("@Imei", SqlDbType.NVarChar, 20);
+            cmd.Parameters.Add("@MaM", SqlDbType.NVarChar, 20);
+            cmd.Parameters.Add("@Mau", SqlDbType.NVarChar, 15);
+            cmd.Parameters.Add("@DaBan", SqlDbType.Bit);
+
+            cmd.Parameters["@Imei"].Value = CTM.Imei;
+            cmd.Parameters["@MaM"].Value = CTM.Mam;
+            cmd.Parameters["@Mau"].Value = CTM.Mau;
+            cmd.Parameters["@DaBan"].Value = CTM.Daban;
+
+            conn.Open();
+            cmd.ExecuteNonQuery();
+            conn.Close();
+
+        }
+
+        public static bool KiemTraImei(string _Imei)
+        {
+            bool check = false;
+            SqlConnection conn = KetnoiCSDL.Hamketnoi();
+            string sql= "Select * from ChiTietMay where Imei='"+_Imei+"'";
+            SqlCommand cmd = new SqlCommand(sql,conn);
+            cmd.CommandType = CommandType.Text;
+            conn.Open();
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.Read())
+                check = true;
+            return check;
+        }
+
+        public static DataTable LayMau()
+        {
+            SqlConnection conn = KetnoiCSDL.Hamketnoi();
+            SqlCommand cmd = new SqlCommand("LayMau", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            conn.Open();
+            SqlDataAdapter da = new SqlDataAdapter();
+            DataTable dt = new DataTable();
+            da.SelectCommand = cmd;
+            da.Fill(dt);
+            conn.Close();
+            return dt;
         }
     }
 }

@@ -59,4 +59,52 @@ insert into LoaiMay values(@MaM,@MaH,@TenM,@Gia,@SoLuongTon,@TGBH,@DungLuong)
 end
 go
 -------------------------xuất máy
-
+create proc XuatTTMay
+as
+begin
+select * from LoaiMay
+end
+go
+-------------------------Nhập chi tiết máy
+create proc NhapCTMay
+@Imei nvarchar(20),
+@MaM nvarchar(20),
+@Mau nvarchar(15),
+@DaBan bit
+as
+begin
+insert into ChiTietMay values(@Imei,@MaM,@Mau,@DaBan)
+end
+go
+--------------------------Nhập số lượng tồn
+alter proc SoLuongTon
+@MaM nvarchar(20)
+as
+begin
+select COUNT(DaBan) from ChiTietMay c, LoaiMay l where DaBan='False' and c.MaM = l.MaM and l.MaM=@MaM
+end
+go
+-------------------------Cập nhật số lượng tồn
+create proc CapNhatSLT
+@SoLuongTon int,
+@MaM nvarchar(20)
+as
+begin
+update LoaiMay set SoLuongTon = @SoLuongTon where MaM=@MaM
+end
+go
+-------------------------Lấy dung lượng
+create proc LayDL
+as
+begin
+select distinct DungLuong from LoaiMay
+end
+go
+-------------------------Lấy màu
+create proc LayMau
+as
+begin
+select distinct Mau from ChiTietMay
+end
+go
+--------------------------

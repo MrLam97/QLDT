@@ -62,7 +62,6 @@
             this.rbpThongKe = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).BeginInit();
             this.SuspendLayout();
@@ -90,7 +89,7 @@
             this.barButtonGroup2,
             this.bbtnQlHang});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 24;
+            this.ribbonControl1.MaxItemId = 25;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageHeaderItemLinks.Add(this.skinRibbonGalleryBarItem3);
             this.ribbonControl1.PageHeaderItemLinks.Add(this.bbtnThoat);
@@ -322,20 +321,12 @@
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
             this.ribbonPageGroup8.Text = "Số máy bán được trong tháng";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(450, 105);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 21);
-            this.textBox1.TabIndex = 2;
-            // 
             // FRM_Main
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(758, 360);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.ribbonControl1);
             this.IsMdiContainer = true;
             this.Name = "FRM_Main";
@@ -387,7 +378,6 @@
         private DevExpress.XtraBars.BarButtonGroup barButtonGroup2;
         private DevExpress.XtraBars.BarButtonItem bbtnQlHang;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
-        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

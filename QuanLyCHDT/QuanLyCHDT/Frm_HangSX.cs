@@ -129,18 +129,23 @@ namespace QuanLyCHDT
             {
                 if (!tblHangSX_BUS.CheckPkey(txtMaH.Text, cbbTenH.Text))
                 {
-                    string mah = txtMaH.Text;
-                    string tenh = cbbTenH.Text;
-                    tblHangsx hsx = new tblHangsx(mah, tenh);
-                    tblHangSX_BUS.ThemHSX(hsx);
-                    rdbTimT.Checked = false;
-                    Showcombobox();
-                    DKMo();
-                    btnThem.Text = "Thêm";
-                    txtMaH.ReadOnly = true;
-                    dgvHangsx.DataSource = tblHangSX_BUS.HienHSX();
-                    Databinding();
-                    cbbTenH.Enabled = false;
+                    if (txtMaH.Text != "" && cbbTenH.Text != "")
+                    {
+                        string mah = txtMaH.Text;
+                        string tenh = cbbTenH.Text;
+                        tblHangsx hsx = new tblHangsx(mah, tenh);
+                        tblHangSX_BUS.ThemHSX(hsx);
+                        rdbTimT.Checked = false;
+                        Showcombobox();
+                        DKMo();
+                        btnThem.Text = "Thêm";
+                        txtMaH.ReadOnly = true;
+                        dgvHangsx.DataSource = tblHangSX_BUS.HienHSX();
+                        Databinding();
+                        cbbTenH.Enabled = false;
+                    }
+                    else
+                        MessageBox.Show("Vui lòng nhập đầy đủ thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                     MessageBox.Show("Mã hãng hoặc tên hãng đã được sửa dụng, vui lòng nhập lại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

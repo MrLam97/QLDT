@@ -222,6 +222,7 @@
             // 
             // dgvHangsx
             // 
+            this.dgvHangsx.BackgroundColor = System.Drawing.Color.GhostWhite;
             this.dgvHangsx.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHangsx.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaH,
@@ -273,6 +274,8 @@
             this.ClientSize = new System.Drawing.Size(786, 309);
             this.Controls.Add(this.layoutControl2);
             this.Controls.Add(this.layoutControl1);
+            this.LookAndFeel.SkinName = "Seven";
+            this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Name = "Frm_HangSX";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "zzzz";

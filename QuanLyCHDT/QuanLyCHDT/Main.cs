@@ -41,6 +41,7 @@ namespace QuanLyCHDT
 
         private void FRM_Main_Load(object sender, EventArgs e)
         {
+            UserLookAndFeel.Default.SetSkinStyle("Seven");
             //ApplicationSettings = new CustomApplicationSettings();
             //UserLookAndFeel.Default.SkinName = ApplicationSettings.SkinName;
         }

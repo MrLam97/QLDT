@@ -3,3 +3,8 @@ D:\Project VS\QuanLyCHDT\DTO\bin\Debug\DTO.pdb
 D:\Project VS\QuanLyCHDT\DTO\obj\Debug\DTO.dll
 D:\Project VS\QuanLyCHDT\DTO\obj\Debug\DTO.pdb
 D:\Project VS\QuanLyCHDT\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+D:\git1\QLDT\QuanLyCHDT\DTO\bin\Debug\DTO.dll
+D:\git1\QLDT\QuanLyCHDT\DTO\bin\Debug\DTO.pdb
+D:\git1\QLDT\QuanLyCHDT\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+D:\git1\QLDT\QuanLyCHDT\DTO\obj\Debug\DTO.dll
+D:\git1\QLDT\QuanLyCHDT\DTO\obj\Debug\DTO.pdb

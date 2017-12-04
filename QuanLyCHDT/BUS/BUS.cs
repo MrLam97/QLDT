@@ -48,5 +48,50 @@ namespace BUS
         {
             tblLoaiMay_DAO.NhapLoaiMay(loaimay);
         }
+
+        public static DataTable HienLMay()
+        {
+            return tblLoaiMay_DAO.HienLoaiMay();
+        }
+
+        public static int SLTon(string MaM)
+        {
+            return tblLoaiMay_DAO.SoLuongTon(MaM);
+        }
+
+        public static void CapNhatSLTon(int slt,string mam)
+        {
+            tblLoaiMay_DAO.CapNhatSLT(slt,mam);
+        }
+
+        public static bool KiemTraMM(string mam)
+        {
+            return tblLoaiMay_DAO.KiemTraMaM(mam);
+        }
+
+        public static DataTable LayDSDL()
+        {
+            return tblLoaiMay_DAO.LayDL();
+        }
+    }
+
+    public class tblChiTietMay_BUS
+    {
+        public static void NhapCTM(tblChiTietMay CTM)
+        {
+            tblChiTietMay_DAO.NhapCTMay(CTM);
+        }
+
+        public static bool KTraImei(string Imei)
+        {
+            return tblChiTietMay_DAO.KiemTraImei(Imei);
+        }
+
+
+
+        public static DataTable LayMauM()
+        {
+            return tblChiTietMay_DAO.LayMau();
+        }
     }
 }
