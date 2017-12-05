@@ -28,10 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnThemDL = new System.Windows.Forms.Button();
+            this.cbbDungLuong = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.cbbMau = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnReset = new DevExpress.XtraEditors.SimpleButton();
             this.btnHoanThanh = new DevExpress.XtraEditors.SimpleButton();
@@ -56,6 +60,8 @@
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
             this.dgvHienLoaiM = new System.Windows.Forms.DataGridView();
+            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.MaM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenM = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,12 +69,6 @@
             this.SoLuongTon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TGBH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DungLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.cbbDungLuong = new System.Windows.Forms.ComboBox();
-            this.btnThemDL = new System.Windows.Forms.Button();
-            this.cbbMau = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -119,6 +119,28 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nhập máy";
             // 
+            // btnThemDL
+            // 
+            this.btnThemDL.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThemDL.Location = new System.Drawing.Point(316, 187);
+            this.btnThemDL.Name = "btnThemDL";
+            this.btnThemDL.Size = new System.Drawing.Size(27, 21);
+            this.btnThemDL.TabIndex = 7;
+            this.btnThemDL.Text = "...";
+            this.btnThemDL.UseVisualStyleBackColor = true;
+            this.btnThemDL.Visible = false;
+            this.btnThemDL.Click += new System.EventHandler(this.btnThemDL_Click);
+            // 
+            // cbbDungLuong
+            // 
+            this.cbbDungLuong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbDungLuong.Enabled = false;
+            this.cbbDungLuong.FormattingEnabled = true;
+            this.cbbDungLuong.Location = new System.Drawing.Point(189, 187);
+            this.cbbDungLuong.Name = "cbbDungLuong";
+            this.cbbDungLuong.Size = new System.Drawing.Size(121, 21);
+            this.cbbDungLuong.TabIndex = 6;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.button1);
@@ -136,6 +158,26 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chi tiết máy";
             this.groupBox2.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Location = new System.Drawing.Point(285, 70);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(27, 21);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "...";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // cbbMau
+            // 
+            this.cbbMau.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbMau.FormattingEnabled = true;
+            this.cbbMau.Location = new System.Drawing.Point(147, 71);
+            this.cbbMau.Name = "cbbMau";
+            this.cbbMau.Size = new System.Drawing.Size(121, 21);
+            this.cbbMau.TabIndex = 5;
             // 
             // label8
             // 
@@ -390,67 +432,18 @@
             this.TGBH,
             this.DungLuong});
             this.dgvHienLoaiM.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvHienLoaiM.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvHienLoaiM.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvHienLoaiM.Location = new System.Drawing.Point(12, 12);
             this.dgvHienLoaiM.Name = "dgvHienLoaiM";
             this.dgvHienLoaiM.Size = new System.Drawing.Size(826, 534);
             this.dgvHienLoaiM.TabIndex = 4;
-            // 
-            // MaM
-            // 
-            this.MaM.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MaM.DataPropertyName = "MaM";
-            this.MaM.HeaderText = "Mã máy";
-            this.MaM.Name = "MaM";
-            // 
-            // MaH
-            // 
-            this.MaH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MaH.DataPropertyName = "MaH";
-            this.MaH.HeaderText = "Mã hãng";
-            this.MaH.Name = "MaH";
-            // 
-            // TenM
-            // 
-            this.TenM.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TenM.DataPropertyName = "TenM";
-            this.TenM.HeaderText = "Tên máy";
-            this.TenM.Name = "TenM";
-            // 
-            // Gia
-            // 
-            this.Gia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Gia.DataPropertyName = "Gia";
-            this.Gia.HeaderText = "Giá";
-            this.Gia.Name = "Gia";
-            // 
-            // SoLuongTon
-            // 
-            this.SoLuongTon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.SoLuongTon.DataPropertyName = "SoLuongTon";
-            this.SoLuongTon.HeaderText = "Số lượng tồn";
-            this.SoLuongTon.Name = "SoLuongTon";
-            // 
-            // TGBH
-            // 
-            this.TGBH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TGBH.DataPropertyName = "TGBH";
-            this.TGBH.HeaderText = "Thời gian bảo hành";
-            this.TGBH.Name = "TGBH";
-            // 
-            // DungLuong
-            // 
-            this.DungLuong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DungLuong.DataPropertyName = "DungLuong";
-            this.DungLuong.HeaderText = "Dung lượng";
-            this.DungLuong.Name = "DungLuong";
             // 
             // layoutControlGroup2
             // 
@@ -472,47 +465,68 @@
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
-            // cbbDungLuong
+            // MaM
             // 
-            this.cbbDungLuong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbDungLuong.Enabled = false;
-            this.cbbDungLuong.FormattingEnabled = true;
-            this.cbbDungLuong.Location = new System.Drawing.Point(189, 187);
-            this.cbbDungLuong.Name = "cbbDungLuong";
-            this.cbbDungLuong.Size = new System.Drawing.Size(121, 21);
-            this.cbbDungLuong.TabIndex = 6;
+            this.MaM.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MaM.DataPropertyName = "MaM";
+            this.MaM.HeaderText = "Mã máy";
+            this.MaM.Name = "MaM";
+            this.MaM.ReadOnly = true;
+            this.MaM.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // btnThemDL
+            // MaH
             // 
-            this.btnThemDL.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThemDL.Location = new System.Drawing.Point(316, 187);
-            this.btnThemDL.Name = "btnThemDL";
-            this.btnThemDL.Size = new System.Drawing.Size(27, 21);
-            this.btnThemDL.TabIndex = 7;
-            this.btnThemDL.Text = "...";
-            this.btnThemDL.UseVisualStyleBackColor = true;
-            this.btnThemDL.Visible = false;
-            this.btnThemDL.Click += new System.EventHandler(this.btnThemDL_Click);
+            this.MaH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MaH.DataPropertyName = "MaH";
+            this.MaH.HeaderText = "Mã hãng";
+            this.MaH.Name = "MaH";
+            this.MaH.ReadOnly = true;
+            this.MaH.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // cbbMau
+            // TenM
             // 
-            this.cbbMau.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbMau.FormattingEnabled = true;
-            this.cbbMau.Location = new System.Drawing.Point(147, 71);
-            this.cbbMau.Name = "cbbMau";
-            this.cbbMau.Size = new System.Drawing.Size(121, 21);
-            this.cbbMau.TabIndex = 5;
+            this.TenM.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TenM.DataPropertyName = "TenM";
+            this.TenM.HeaderText = "Tên máy";
+            this.TenM.Name = "TenM";
+            this.TenM.ReadOnly = true;
+            this.TenM.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // button1
+            // Gia
             // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(285, 70);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(27, 21);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "...";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Gia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Gia.DataPropertyName = "Gia";
+            this.Gia.HeaderText = "Giá";
+            this.Gia.Name = "Gia";
+            this.Gia.ReadOnly = true;
+            this.Gia.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // SoLuongTon
+            // 
+            this.SoLuongTon.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SoLuongTon.DataPropertyName = "SoLuongTon";
+            this.SoLuongTon.HeaderText = "Số lượng tồn";
+            this.SoLuongTon.Name = "SoLuongTon";
+            this.SoLuongTon.ReadOnly = true;
+            this.SoLuongTon.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // TGBH
+            // 
+            this.TGBH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TGBH.DataPropertyName = "TGBH";
+            this.TGBH.HeaderText = "Thời gian bảo hành";
+            this.TGBH.Name = "TGBH";
+            this.TGBH.ReadOnly = true;
+            this.TGBH.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // DungLuong
+            // 
+            this.DungLuong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DungLuong.DataPropertyName = "DungLuong";
+            this.DungLuong.HeaderText = "Dung lượng";
+            this.DungLuong.Name = "DungLuong";
+            this.DungLuong.ReadOnly = true;
+            this.DungLuong.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Frm_QLDT
             // 
@@ -575,6 +589,11 @@
         private System.Windows.Forms.DataGridView dgvHienLoaiM;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
+        private DevExpress.XtraEditors.SimpleButton btnLuu;
+        private System.Windows.Forms.ComboBox cbbDungLuong;
+        private System.Windows.Forms.Button btnThemDL;
+        private System.Windows.Forms.ComboBox cbbMau;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaM;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaH;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenM;
@@ -582,10 +601,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuongTon;
         private System.Windows.Forms.DataGridViewTextBoxColumn TGBH;
         private System.Windows.Forms.DataGridViewTextBoxColumn DungLuong;
-        private DevExpress.XtraEditors.SimpleButton btnLuu;
-        private System.Windows.Forms.ComboBox cbbDungLuong;
-        private System.Windows.Forms.Button btnThemDL;
-        private System.Windows.Forms.ComboBox cbbMau;
-        private System.Windows.Forms.Button button1;
     }
 }

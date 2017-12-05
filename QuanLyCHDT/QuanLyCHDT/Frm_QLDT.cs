@@ -90,6 +90,8 @@ namespace QuanLyCHDT
                 btnThemct.Enabled = true;
                 btnThem.Text = "Thêm";
                 DKKhoa();
+                dgvHienLoaiM.DataSource = tblLoaiMay_BUS.HienLMay();
+                DataBinding();
             }
         }
 

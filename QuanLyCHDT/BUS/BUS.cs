@@ -73,6 +73,11 @@ namespace BUS
         {
             return tblLoaiMay_DAO.LayDL();
         }
+
+        public static DataTable HienMayTheoH(string mah)
+        {
+            return tblLoaiMay_DAO.HienMayTheoHSX(mah);
+        }
     }
 
     public class tblChiTietMay_BUS
@@ -86,12 +91,47 @@ namespace BUS
         {
             return tblChiTietMay_DAO.KiemTraImei(Imei);
         }
-
-
-
+       
         public static DataTable LayMauM()
         {
             return tblChiTietMay_DAO.LayMau();
+        }
+
+        public static DataTable CTMTheoMM(string mah)
+        {
+            return tblChiTietMay_DAO.CTMTheoMaM(mah);
+        }
+    }
+    public class tblUser_BUS
+    {
+        public static bool KiemTraDN(string id, string pass)
+        {
+            return tblUser_DAO.KiemTraDangNhap(id, pass);
+        }
+
+        public static bool KiemTraDNBoss(string id, string pass)
+        {
+            return tblUser_DAO.KiemTraDNBoss(id, pass);
+        }
+
+        public static void DangKy(tblUser user)
+        {
+            tblUser_DAO.DangKyNV(user);
+        }
+
+        public static bool KiemTraTenDK(string id)
+        {
+            return tblUser_DAO.Kiemtrakhoachinh(id);
+        }
+
+        public static void DoiMKNV(string manv, string passnv, string pass)
+        {
+            tblUser_DAO.DoiMK(manv, passnv, pass);
+        }
+
+        public static bool TimIDBoss(string id)
+        {
+            return tblUser_DAO.TimIDBoss(id);
         }
     }
 }

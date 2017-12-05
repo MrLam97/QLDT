@@ -107,4 +107,41 @@ begin
 select distinct Mau from ChiTietMay
 end
 go
---------------------------
+--------------------------Thêm nhân viên
+alter proc ThemNV
+@MaNV nvarchar(20),
+@TenNV nvarchar(50),
+@PassNV nvarchar(20),
+@SDTNV nvarchar(12)
+as
+begin
+insert into NhanVien values(@MaNV,@TenNV,@PassNV,@SDTNV)
+end
+go
+-------------------------Đổi mật khẩu nhân viên
+create proc DoiMK
+@MaNV nvarchar(20),
+@PassNV nvarchar(20),
+@Pass nvarchar(20)
+as
+begin
+update NhanVien set PassNV = @Pass where MaNV = @MaNV and PassNV=@PassNV
+end
+go
+------------------------Tra cứu máy theo hãng
+create proc HienMayTheoHSX
+@MaH nvarchar(20)
+as
+begin
+select * from LoaiMay where MaH=@MaH
+end
+go
+------------------------Tra cứu chi tiết máy theo mã máy
+create proc CTMTheoMaM
+@MaM nvarchar(20)
+as
+begin
+select * from ChiTietMay where MaM=@MaM
+end
+go
+------------------------

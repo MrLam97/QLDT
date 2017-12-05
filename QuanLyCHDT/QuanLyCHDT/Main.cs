@@ -9,6 +9,9 @@ using System.Windows.Forms;
 using DevExpress.Skins;
 using DevExpress.LookAndFeel;
 using System.Configuration;
+using DevExpress.XtraBars;
+using DTO;
+using BUS;
 
 namespace QuanLyCHDT
 {
@@ -22,15 +25,29 @@ namespace QuanLyCHDT
     //        set { this("SkinName") = value; }
     //    }
     //}
-
+    
     public partial class FRM_Main : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        public static string MaNVDN = string.Empty;
         public FRM_Main()
         {
             InitializeComponent();
            
         }
 
+        private void MoDK()
+        {
+            bbtnDangKy.Enabled = true;
+            bbtnDoiPass.Enabled = true;
+            bbtnDangXuat.Enabled = true;
+        }
+
+        private void KhoaDK()
+        {
+            bbtnDangKy.Enabled = false;
+            bbtnDoiPass.Enabled = false;
+            bbtnDangXuat.Enabled = false;
+        }
 
         private void bbtnThoat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
@@ -44,6 +61,7 @@ namespace QuanLyCHDT
             UserLookAndFeel.Default.SetSkinStyle("Seven");
             //ApplicationSettings = new CustomApplicationSettings();
             //UserLookAndFeel.Default.SkinName = ApplicationSettings.SkinName;
+            
         }
 
         private void bbtnNhapSP_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -76,6 +94,77 @@ namespace QuanLyCHDT
         {
             //ApplicationSettings.SkinName = UserLookAndFeel.Default.SkinName;
             //ApplicationSettings.Save();
+        }
+
+        private void bbtnDangNhap1_ItemClick(object sender,ItemClickEventArgs e)
+        {
+            if (bhiManv.Caption != "")
+                MessageBox.Show("Bạn chưa đăng xuất.","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            else
+            {
+                Frm_DangNhap DangNhap = new Frm_DangNhap();
+                DangNhap.ShowDialog();
+            }
+        }
+
+        private void bbtnDangXuat_ItemClick(object sender,ItemClickEventArgs e)
+        {
+            if (bhiManv.Caption != "")
+            {
+                DialogResult dr = MessageBox.Show("Bạn muốn đăng xuất?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                if (dr == DialogResult.OK)
+                {
+                    MaNVDN = null;
+                    bbtnDangXuat.Enabled = false;
+
+                    MessageBox.Show("Đăng xuất thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void FRM_Main_Activated(object sender, EventArgs e)
+        {
+            bhiManv.Caption = MaNVDN;
+
+            if (tblUser_BUS.TimIDBoss(bhiManv.Caption))
+            {
+                MoDK();
+            }
+            else
+            {
+                if (bhiManv.Caption != "")
+                {
+                    bbtnDangXuat.Enabled = true;
+                }
+                else
+                    KhoaDK();
+            }
+        }
+
+        private void bbtnDangKy_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            foreach (Form f in this.MdiChildren)
+                if (f.Name == "Frm_DangKy")
+                {
+                    f.Activate();
+                    return;
+                }
+            Frm_DangKy dk = new Frm_DangKy();
+            dk.MdiParent = this;
+            dk.Show();
+        }
+
+        private void bbtnDoiPass_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            foreach (Form f in this.MdiChildren)
+                if (f.Name == "Frm_DoiPass")
+                {
+                    f.Activate();
+                    return;
+                }
+            Frm_DoiPass dk = new Frm_DoiPass();
+            dk.MdiParent = this;
+            dk.Show();
         }
     }
 }
