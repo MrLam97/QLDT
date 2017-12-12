@@ -62,7 +62,10 @@
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
             this.dgvHienLoaiM = new System.Windows.Forms.DataGridView();
+            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.MaM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.MaH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -448,6 +451,7 @@
             this.dgvHienLoaiM.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHienLoaiM.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaM,
+            this.Column1,
             this.MaH,
             this.TenM,
             this.Gia,
@@ -469,6 +473,26 @@
             this.dgvHienLoaiM.Size = new System.Drawing.Size(826, 519);
             this.dgvHienLoaiM.TabIndex = 4;
             // 
+            // layoutControlGroup2
+            // 
+            this.layoutControlGroup2.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup2.GroupBordersVisible = false;
+            this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem2});
+            this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlGroup2.Name = "layoutControlGroup2";
+            this.layoutControlGroup2.Size = new System.Drawing.Size(850, 558);
+            this.layoutControlGroup2.TextVisible = false;
+            // 
+            // layoutControlItem2
+            // 
+            this.layoutControlItem2.Control = this.dgvHienLoaiM;
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem2.Name = "layoutControlItem2";
+            this.layoutControlItem2.Size = new System.Drawing.Size(830, 538);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem2.TextVisible = false;
+            // 
             // MaM
             // 
             this.MaM.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -477,6 +501,11 @@
             this.MaM.Name = "MaM";
             this.MaM.ReadOnly = true;
             this.MaM.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Column1";
+            this.Column1.Name = "Column1";
             // 
             // MaH
             // 
@@ -629,6 +658,7 @@
         private System.Windows.Forms.TextBox txtRam;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaM;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaH;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenM;
         private System.Windows.Forms.DataGridViewTextBoxColumn Gia;
