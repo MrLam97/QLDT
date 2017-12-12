@@ -66,6 +66,8 @@ namespace QuanLyCHDT
             txtTGBH.DataBindings.Add("Text", dgvHienLoaiM.DataSource, "TGBH");
             txtDungLuong.DataBindings.Clear();
             txtDungLuong.DataBindings.Add("Text", dgvHienLoaiM.DataSource, "DungLuong");
+            txtRam.DataBindings.Clear();
+            txtRam.DataBindings.Add("Text", dgvHienLoaiM.DataSource, "Ram");
         }
 
         private void DataBinding1()

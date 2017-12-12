@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.rdbTimT = new System.Windows.Forms.RadioButton();
@@ -44,10 +43,10 @@
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
             this.dgvHangsx = new System.Windows.Forms.DataGridView();
-            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.MaH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -229,18 +228,28 @@
             this.MaH,
             this.TenH});
             this.dgvHangsx.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvHangsx.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvHangsx.Location = new System.Drawing.Point(12, 12);
             this.dgvHangsx.Name = "dgvHangsx";
             this.dgvHangsx.Size = new System.Drawing.Size(487, 285);
             this.dgvHangsx.TabIndex = 7;
+            // 
+            // MaH
+            // 
+            this.MaH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MaH.DataPropertyName = "MaH";
+            this.MaH.HeaderText = "Mã hãng";
+            this.MaH.Name = "MaH";
+            this.MaH.ReadOnly = true;
+            this.MaH.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // TenH
+            // 
+            this.TenH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TenH.DataPropertyName = "TenH";
+            this.TenH.HeaderText = "Tên hãng";
+            this.TenH.Name = "TenH";
+            this.TenH.ReadOnly = true;
+            this.TenH.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // layoutControlGroup2
             // 
@@ -262,24 +271,6 @@
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
-            // MaH
-            // 
-            this.MaH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MaH.DataPropertyName = "MaH";
-            this.MaH.HeaderText = "Mã hãng";
-            this.MaH.Name = "MaH";
-            this.MaH.ReadOnly = true;
-            this.MaH.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // TenH
-            // 
-            this.TenH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TenH.DataPropertyName = "TenH";
-            this.TenH.HeaderText = "Tên hãng";
-            this.TenH.Name = "TenH";
-            this.TenH.ReadOnly = true;
-            this.TenH.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
             // Frm_HangSX
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -287,8 +278,7 @@
             this.ClientSize = new System.Drawing.Size(786, 309);
             this.Controls.Add(this.layoutControl2);
             this.Controls.Add(this.layoutControl1);
-            this.LookAndFeel.SkinName = "Seven";
-            this.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.LookAndFeel.SkinName = "iMaginary";
             this.Name = "Frm_HangSX";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "zzzz";

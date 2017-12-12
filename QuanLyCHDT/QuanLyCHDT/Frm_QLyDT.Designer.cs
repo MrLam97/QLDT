@@ -48,6 +48,7 @@
             this.SoLuongTon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TGBH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DungLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RAM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControl4 = new DevExpress.XtraLayout.LayoutControl();
@@ -67,6 +68,7 @@
             this.txtMau = new System.Windows.Forms.TextBox();
             this.txtImei = new System.Windows.Forms.TextBox();
             this.txtSLT = new System.Windows.Forms.TextBox();
+            this.txtRam = new System.Windows.Forms.TextBox();
             this.txtDungLuong = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -75,6 +77,7 @@
             this.txtTenM = new System.Windows.Forms.TextBox();
             this.txtMaM = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -189,10 +192,10 @@
             // 
             this.layoutControl2.Controls.Add(this.groupBox2);
             this.layoutControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.layoutControl2.Location = new System.Drawing.Point(0, 594);
+            this.layoutControl2.Location = new System.Drawing.Point(0, 445);
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.Root = this.layoutControlGroup2;
-            this.layoutControl2.Size = new System.Drawing.Size(1160, 111);
+            this.layoutControl2.Size = new System.Drawing.Size(1160, 79);
             this.layoutControl2.TabIndex = 1;
             this.layoutControl2.Text = "layoutControl2";
             // 
@@ -200,7 +203,7 @@
             // 
             this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1136, 87);
+            this.groupBox2.Size = new System.Drawing.Size(1136, 55);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức năng";
@@ -213,7 +216,7 @@
             this.layoutControlItem4});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(1160, 111);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(1160, 79);
             this.layoutControlGroup2.TextVisible = false;
             // 
             // layoutControlItem4
@@ -221,7 +224,7 @@
             this.layoutControlItem4.Control = this.groupBox2;
             this.layoutControlItem4.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(1140, 91);
+            this.layoutControlItem4.Size = new System.Drawing.Size(1140, 59);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
             // 
@@ -232,7 +235,7 @@
             this.layoutControl3.Location = new System.Drawing.Point(0, 79);
             this.layoutControl3.Name = "layoutControl3";
             this.layoutControl3.Root = this.layoutControlGroup3;
-            this.layoutControl3.Size = new System.Drawing.Size(1160, 243);
+            this.layoutControl3.Size = new System.Drawing.Size(1160, 176);
             this.layoutControl3.TabIndex = 2;
             this.layoutControl3.Text = "layoutControl3";
             // 
@@ -247,11 +250,12 @@
             this.Gia,
             this.SoLuongTon,
             this.TGBH,
-            this.DungLuong});
+            this.DungLuong,
+            this.RAM});
             this.dgvHienLoaiM.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgvHienLoaiM.Location = new System.Drawing.Point(12, 12);
             this.dgvHienLoaiM.Name = "dgvHienLoaiM";
-            this.dgvHienLoaiM.Size = new System.Drawing.Size(1136, 219);
+            this.dgvHienLoaiM.Size = new System.Drawing.Size(1136, 152);
             this.dgvHienLoaiM.TabIndex = 6;
             this.dgvHienLoaiM.SelectionChanged += new System.EventHandler(this.dgvHienLoaiM_SelectionChanged);
             this.dgvHienLoaiM.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvHienLoaiM_MouseClick_1);
@@ -319,6 +323,14 @@
             this.DungLuong.ReadOnly = true;
             this.DungLuong.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
+            // RAM
+            // 
+            this.RAM.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.RAM.DataPropertyName = "Ram";
+            this.RAM.HeaderText = "RAM";
+            this.RAM.Name = "RAM";
+            this.RAM.ReadOnly = true;
+            // 
             // layoutControlGroup3
             // 
             this.layoutControlGroup3.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -327,7 +339,7 @@
             this.layoutControlItem2});
             this.layoutControlGroup3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup3.Name = "layoutControlGroup3";
-            this.layoutControlGroup3.Size = new System.Drawing.Size(1160, 243);
+            this.layoutControlGroup3.Size = new System.Drawing.Size(1160, 176);
             this.layoutControlGroup3.TextVisible = false;
             // 
             // layoutControlItem2
@@ -335,7 +347,7 @@
             this.layoutControlItem2.Control = this.dgvHienLoaiM;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(1140, 223);
+            this.layoutControlItem2.Size = new System.Drawing.Size(1140, 156);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -343,10 +355,10 @@
             // 
             this.layoutControl4.Controls.Add(this.dgvChiTietMay);
             this.layoutControl4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.layoutControl4.Location = new System.Drawing.Point(575, 322);
+            this.layoutControl4.Location = new System.Drawing.Point(575, 255);
             this.layoutControl4.Name = "layoutControl4";
             this.layoutControl4.Root = this.layoutControlGroup4;
-            this.layoutControl4.Size = new System.Drawing.Size(585, 272);
+            this.layoutControl4.Size = new System.Drawing.Size(585, 190);
             this.layoutControl4.TabIndex = 3;
             this.layoutControl4.Text = "layoutControl4";
             // 
@@ -361,7 +373,7 @@
             this.DaBan});
             this.dgvChiTietMay.Location = new System.Drawing.Point(12, 12);
             this.dgvChiTietMay.Name = "dgvChiTietMay";
-            this.dgvChiTietMay.Size = new System.Drawing.Size(561, 248);
+            this.dgvChiTietMay.Size = new System.Drawing.Size(561, 166);
             this.dgvChiTietMay.TabIndex = 4;
             // 
             // Imei
@@ -408,7 +420,7 @@
             this.layoutControlItem3});
             this.layoutControlGroup4.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup4.Name = "layoutControlGroup4";
-            this.layoutControlGroup4.Size = new System.Drawing.Size(585, 272);
+            this.layoutControlGroup4.Size = new System.Drawing.Size(585, 190);
             this.layoutControlGroup4.TextVisible = false;
             // 
             // layoutControlItem3
@@ -416,7 +428,7 @@
             this.layoutControlItem3.Control = this.dgvChiTietMay;
             this.layoutControlItem3.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(565, 252);
+            this.layoutControlItem3.Size = new System.Drawing.Size(565, 170);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
@@ -428,7 +440,7 @@
             this.layoutControlItem6});
             this.layoutControlGroup6.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup6.Name = "layoutControlGroup6";
-            this.layoutControlGroup6.Size = new System.Drawing.Size(575, 272);
+            this.layoutControlGroup6.Size = new System.Drawing.Size(575, 190);
             this.layoutControlGroup6.TextVisible = false;
             // 
             // layoutControlItem6
@@ -436,7 +448,7 @@
             this.layoutControlItem6.Control = this.groupBox4;
             this.layoutControlItem6.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(555, 252);
+            this.layoutControlItem6.Size = new System.Drawing.Size(555, 170);
             this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem6.TextVisible = false;
             // 
@@ -448,6 +460,7 @@
             this.groupBox4.Controls.Add(this.txtMau);
             this.groupBox4.Controls.Add(this.txtImei);
             this.groupBox4.Controls.Add(this.txtSLT);
+            this.groupBox4.Controls.Add(this.txtRam);
             this.groupBox4.Controls.Add(this.txtDungLuong);
             this.groupBox4.Controls.Add(this.label8);
             this.groupBox4.Controls.Add(this.label10);
@@ -456,6 +469,7 @@
             this.groupBox4.Controls.Add(this.txtTenM);
             this.groupBox4.Controls.Add(this.txtMaM);
             this.groupBox4.Controls.Add(this.label11);
+            this.groupBox4.Controls.Add(this.label12);
             this.groupBox4.Controls.Add(this.label7);
             this.groupBox4.Controls.Add(this.label6);
             this.groupBox4.Controls.Add(this.label4);
@@ -464,7 +478,7 @@
             this.groupBox4.Controls.Add(this.label5);
             this.groupBox4.Location = new System.Drawing.Point(12, 12);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(551, 248);
+            this.groupBox4.Size = new System.Drawing.Size(551, 166);
             this.groupBox4.TabIndex = 4;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Thông tin máy";
@@ -474,7 +488,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Tahoma", 14F);
             this.label9.ForeColor = System.Drawing.Color.Blue;
-            this.label9.Location = new System.Drawing.Point(368, 34);
+            this.label9.Location = new System.Drawing.Point(11, 115);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(116, 23);
             this.label9.TabIndex = 26;
@@ -484,7 +498,7 @@
             // 
             this.cbDaBan.AutoSize = true;
             this.cbDaBan.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.cbDaBan.Location = new System.Drawing.Point(428, 163);
+            this.cbDaBan.Location = new System.Drawing.Point(414, 138);
             this.cbDaBan.Name = "cbDaBan";
             this.cbDaBan.Size = new System.Drawing.Size(90, 27);
             this.cbDaBan.TabIndex = 25;
@@ -497,14 +511,14 @@
             this.cbbHang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbHang.Enabled = false;
             this.cbbHang.FormattingEnabled = true;
-            this.cbbHang.Location = new System.Drawing.Point(212, 18);
+            this.cbbHang.Location = new System.Drawing.Point(190, 18);
             this.cbbHang.Name = "cbbHang";
             this.cbbHang.Size = new System.Drawing.Size(121, 21);
             this.cbbHang.TabIndex = 6;
             // 
             // txtMau
             // 
-            this.txtMau.Location = new System.Drawing.Point(428, 122);
+            this.txtMau.Location = new System.Drawing.Point(269, 141);
             this.txtMau.Name = "txtMau";
             this.txtMau.ReadOnly = true;
             this.txtMau.Size = new System.Drawing.Size(100, 21);
@@ -512,7 +526,7 @@
             // 
             // txtImei
             // 
-            this.txtImei.Location = new System.Drawing.Point(428, 78);
+            this.txtImei.Location = new System.Drawing.Point(68, 141);
             this.txtImei.Name = "txtImei";
             this.txtImei.ReadOnly = true;
             this.txtImei.Size = new System.Drawing.Size(100, 21);
@@ -520,15 +534,23 @@
             // 
             // txtSLT
             // 
-            this.txtSLT.Location = new System.Drawing.Point(213, 149);
+            this.txtSLT.Location = new System.Drawing.Point(430, 68);
             this.txtSLT.Name = "txtSLT";
             this.txtSLT.ReadOnly = true;
             this.txtSLT.Size = new System.Drawing.Size(100, 21);
             this.txtSLT.TabIndex = 22;
             // 
+            // txtRam
+            // 
+            this.txtRam.Location = new System.Drawing.Point(429, 94);
+            this.txtRam.Name = "txtRam";
+            this.txtRam.ReadOnly = true;
+            this.txtRam.Size = new System.Drawing.Size(100, 21);
+            this.txtRam.TabIndex = 22;
+            // 
             // txtDungLuong
             // 
-            this.txtDungLuong.Location = new System.Drawing.Point(213, 217);
+            this.txtDungLuong.Location = new System.Drawing.Point(190, 94);
             this.txtDungLuong.Name = "txtDungLuong";
             this.txtDungLuong.ReadOnly = true;
             this.txtDungLuong.Size = new System.Drawing.Size(100, 21);
@@ -538,7 +560,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label8.Location = new System.Drawing.Point(368, 76);
+            this.label8.Location = new System.Drawing.Point(8, 139);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(54, 23);
             this.label8.TabIndex = 19;
@@ -548,7 +570,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label10.Location = new System.Drawing.Point(369, 120);
+            this.label10.Location = new System.Drawing.Point(210, 139);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(53, 23);
             this.label10.TabIndex = 20;
@@ -556,7 +578,7 @@
             // 
             // txtGia
             // 
-            this.txtGia.Location = new System.Drawing.Point(213, 113);
+            this.txtGia.Location = new System.Drawing.Point(429, 44);
             this.txtGia.Name = "txtGia";
             this.txtGia.ReadOnly = true;
             this.txtGia.Size = new System.Drawing.Size(100, 21);
@@ -564,7 +586,7 @@
             // 
             // txtTGBH
             // 
-            this.txtTGBH.Location = new System.Drawing.Point(213, 182);
+            this.txtTGBH.Location = new System.Drawing.Point(191, 68);
             this.txtTGBH.Name = "txtTGBH";
             this.txtTGBH.ReadOnly = true;
             this.txtTGBH.Size = new System.Drawing.Size(100, 21);
@@ -572,7 +594,7 @@
             // 
             // txtTenM
             // 
-            this.txtTenM.Location = new System.Drawing.Point(213, 78);
+            this.txtTenM.Location = new System.Drawing.Point(190, 44);
             this.txtTenM.Name = "txtTenM";
             this.txtTenM.ReadOnly = true;
             this.txtTenM.Size = new System.Drawing.Size(100, 21);
@@ -580,7 +602,7 @@
             // 
             // txtMaM
             // 
-            this.txtMaM.Location = new System.Drawing.Point(213, 49);
+            this.txtMaM.Location = new System.Drawing.Point(429, 20);
             this.txtMaM.Name = "txtMaM";
             this.txtMaM.ReadOnly = true;
             this.txtMaM.Size = new System.Drawing.Size(100, 21);
@@ -590,17 +612,27 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label11.Location = new System.Drawing.Point(88, 147);
+            this.label11.Location = new System.Drawing.Point(305, 69);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(125, 23);
             this.label11.TabIndex = 7;
             this.label11.Text = "Số lượng tồn:";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.label12.Location = new System.Drawing.Point(374, 92);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(55, 23);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "Ram:";
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label7.Location = new System.Drawing.Point(98, 215);
+            this.label7.Location = new System.Drawing.Point(75, 92);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(117, 23);
             this.label7.TabIndex = 7;
@@ -610,7 +642,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label6.Location = new System.Drawing.Point(33, 182);
+            this.label6.Location = new System.Drawing.Point(11, 68);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(181, 23);
             this.label6.TabIndex = 8;
@@ -620,7 +652,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label4.Location = new System.Drawing.Point(131, 111);
+            this.label4.Location = new System.Drawing.Point(347, 44);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(82, 23);
             this.label4.TabIndex = 9;
@@ -630,7 +662,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label3.Location = new System.Drawing.Point(124, 76);
+            this.label3.Location = new System.Drawing.Point(102, 45);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(90, 23);
             this.label3.TabIndex = 10;
@@ -640,7 +672,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label2.Location = new System.Drawing.Point(131, 47);
+            this.label2.Location = new System.Drawing.Point(347, 18);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 23);
             this.label2.TabIndex = 11;
@@ -650,7 +682,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label5.Location = new System.Drawing.Point(75, 16);
+            this.label5.Location = new System.Drawing.Point(53, 16);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(139, 23);
             this.label5.TabIndex = 12;
@@ -660,10 +692,10 @@
             // 
             this.layoutControl6.Controls.Add(this.groupBox4);
             this.layoutControl6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl6.Location = new System.Drawing.Point(0, 322);
+            this.layoutControl6.Location = new System.Drawing.Point(0, 255);
             this.layoutControl6.Name = "layoutControl6";
             this.layoutControl6.Root = this.layoutControlGroup6;
-            this.layoutControl6.Size = new System.Drawing.Size(575, 272);
+            this.layoutControl6.Size = new System.Drawing.Size(575, 190);
             this.layoutControl6.TabIndex = 5;
             this.layoutControl6.Text = "layoutControl6";
             // 
@@ -671,13 +703,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1160, 705);
+            this.ClientSize = new System.Drawing.Size(1160, 524);
             this.Controls.Add(this.layoutControl6);
             this.Controls.Add(this.layoutControl4);
             this.Controls.Add(this.layoutControl3);
             this.Controls.Add(this.layoutControl2);
             this.Controls.Add(this.layoutControl1);
-            this.LookAndFeel.SkinName = "Seven";
+            this.LookAndFeel.SkinName = "iMaginary";
             this.Name = "Frm_QLyDT";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_QLyDT";
@@ -735,13 +767,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Mau;
         private System.Windows.Forms.DataGridViewCheckBoxColumn DaBan;
         private System.Windows.Forms.DataGridView dgvHienLoaiM;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaM;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaH;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenM;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Gia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuongTon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TGBH;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DungLuong;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
@@ -769,5 +794,15 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtSLT;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaM;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenM;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Gia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuongTon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TGBH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DungLuong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RAM;
+        private System.Windows.Forms.TextBox txtRam;
+        private System.Windows.Forms.Label label12;
     }
 }

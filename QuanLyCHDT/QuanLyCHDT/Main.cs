@@ -58,7 +58,7 @@ namespace QuanLyCHDT
 
         private void FRM_Main_Load(object sender, EventArgs e)
         {
-            UserLookAndFeel.Default.SetSkinStyle("Seven");
+            UserLookAndFeel.Default.SetSkinStyle("iMaginary");
             //ApplicationSettings = new CustomApplicationSettings();
             //UserLookAndFeel.Default.SkinName = ApplicationSettings.SkinName;
             
@@ -80,7 +80,7 @@ namespace QuanLyCHDT
         private void bbtnQlHang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             foreach (Form f in this.MdiChildren)
-                if (f.Name == "Frm_HangSx")
+                if (f.Name == "Frm_HangSX")
                 {
                     f.Activate();
                     return;
@@ -163,6 +163,19 @@ namespace QuanLyCHDT
                     return;
                 }
             Frm_DoiPass dk = new Frm_DoiPass();
+            dk.MdiParent = this;
+            dk.Show();
+        }
+
+        private void bbtnTraCuuMay_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            foreach (Form f in this.MdiChildren)
+                if (f.Name == "Frm_QLyDT")
+                {
+                    f.Activate();
+                    return;
+                }
+            Frm_QLyDT dk = new Frm_QLyDT();
             dk.MdiParent = this;
             dk.Show();
         }

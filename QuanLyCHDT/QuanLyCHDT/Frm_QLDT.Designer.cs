@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnThemDL = new System.Windows.Forms.Button();
@@ -45,10 +45,12 @@
             this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.btnThemct = new DevExpress.XtraEditors.SimpleButton();
+            this.txtRam = new System.Windows.Forms.TextBox();
             this.txtGia = new System.Windows.Forms.TextBox();
             this.txtTGBH = new System.Windows.Forms.TextBox();
             this.txtTenM = new System.Windows.Forms.TextBox();
             this.txtMaM = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.cbbHangsx = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -67,6 +69,7 @@
             this.SoLuongTon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TGBH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DungLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RAM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
@@ -89,7 +92,7 @@
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(373, 558);
+            this.layoutControl1.Size = new System.Drawing.Size(373, 543);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -101,10 +104,12 @@
             this.groupBox1.Controls.Add(this.btnLuu);
             this.groupBox1.Controls.Add(this.btnThem);
             this.groupBox1.Controls.Add(this.btnThemct);
+            this.groupBox1.Controls.Add(this.txtRam);
             this.groupBox1.Controls.Add(this.txtGia);
             this.groupBox1.Controls.Add(this.txtTGBH);
             this.groupBox1.Controls.Add(this.txtTenM);
             this.groupBox1.Controls.Add(this.txtMaM);
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.cbbHangsx);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
@@ -114,7 +119,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(349, 534);
+            this.groupBox1.Size = new System.Drawing.Size(349, 519);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nhập máy";
@@ -122,7 +127,7 @@
             // btnThemDL
             // 
             this.btnThemDL.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThemDL.Location = new System.Drawing.Point(316, 187);
+            this.btnThemDL.Location = new System.Drawing.Point(316, 179);
             this.btnThemDL.Name = "btnThemDL";
             this.btnThemDL.Size = new System.Drawing.Size(27, 21);
             this.btnThemDL.TabIndex = 7;
@@ -136,7 +141,7 @@
             this.cbbDungLuong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbDungLuong.Enabled = false;
             this.cbbDungLuong.FormattingEnabled = true;
-            this.cbbDungLuong.Location = new System.Drawing.Point(189, 187);
+            this.cbbDungLuong.Location = new System.Drawing.Point(189, 179);
             this.cbbDungLuong.Name = "cbbDungLuong";
             this.cbbDungLuong.Size = new System.Drawing.Size(121, 21);
             this.cbbDungLuong.TabIndex = 6;
@@ -151,9 +156,9 @@
             this.groupBox2.Controls.Add(this.btnThem1);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.txtImei);
-            this.groupBox2.Location = new System.Drawing.Point(0, 322);
+            this.groupBox2.Location = new System.Drawing.Point(0, 333);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(349, 212);
+            this.groupBox2.Size = new System.Drawing.Size(349, 189);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chi tiết máy";
@@ -162,7 +167,7 @@
             // button1
             // 
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(285, 70);
+            this.button1.Location = new System.Drawing.Point(285, 57);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(27, 21);
             this.button1.TabIndex = 7;
@@ -174,7 +179,7 @@
             // 
             this.cbbMau.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbMau.FormattingEnabled = true;
-            this.cbbMau.Location = new System.Drawing.Point(147, 71);
+            this.cbbMau.Location = new System.Drawing.Point(148, 57);
             this.cbbMau.Name = "cbbMau";
             this.cbbMau.Size = new System.Drawing.Size(121, 21);
             this.cbbMau.TabIndex = 5;
@@ -183,7 +188,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label8.Location = new System.Drawing.Point(86, 27);
+            this.label8.Location = new System.Drawing.Point(87, 18);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(54, 23);
             this.label8.TabIndex = 0;
@@ -195,7 +200,7 @@
             this.btnReset.Appearance.Options.UseFont = true;
             this.btnReset.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnReset.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReset.Location = new System.Drawing.Point(171, 116);
+            this.btnReset.Location = new System.Drawing.Point(186, 93);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(89, 31);
             this.btnReset.TabIndex = 4;
@@ -208,7 +213,7 @@
             this.btnHoanThanh.Appearance.Options.UseFont = true;
             this.btnHoanThanh.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnHoanThanh.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHoanThanh.Location = new System.Drawing.Point(95, 166);
+            this.btnHoanThanh.Location = new System.Drawing.Point(110, 143);
             this.btnHoanThanh.Name = "btnHoanThanh";
             this.btnHoanThanh.Size = new System.Drawing.Size(115, 31);
             this.btnHoanThanh.TabIndex = 4;
@@ -221,7 +226,7 @@
             this.btnThem1.Appearance.Options.UseFont = true;
             this.btnThem1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnThem1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThem1.Location = new System.Drawing.Point(51, 116);
+            this.btnThem1.Location = new System.Drawing.Point(66, 93);
             this.btnThem1.Name = "btnThem1";
             this.btnThem1.Size = new System.Drawing.Size(89, 31);
             this.btnThem1.TabIndex = 4;
@@ -232,7 +237,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label10.Location = new System.Drawing.Point(87, 71);
+            this.label10.Location = new System.Drawing.Point(88, 57);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(53, 23);
             this.label10.TabIndex = 0;
@@ -240,7 +245,7 @@
             // 
             // txtImei
             // 
-            this.txtImei.Location = new System.Drawing.Point(147, 29);
+            this.txtImei.Location = new System.Drawing.Point(148, 20);
             this.txtImei.Name = "txtImei";
             this.txtImei.Size = new System.Drawing.Size(100, 21);
             this.txtImei.TabIndex = 2;
@@ -252,7 +257,7 @@
             this.btnLuu.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnLuu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLuu.Enabled = false;
-            this.btnLuu.Location = new System.Drawing.Point(183, 224);
+            this.btnLuu.Location = new System.Drawing.Point(198, 246);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(88, 31);
             this.btnLuu.TabIndex = 4;
@@ -265,7 +270,7 @@
             this.btnThem.Appearance.Options.UseFont = true;
             this.btnThem.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnThem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThem.Location = new System.Drawing.Point(51, 224);
+            this.btnThem.Location = new System.Drawing.Point(66, 246);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(89, 31);
             this.btnThem.TabIndex = 4;
@@ -278,16 +283,24 @@
             this.btnThemct.Appearance.Options.UseFont = true;
             this.btnThemct.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
             this.btnThemct.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThemct.Location = new System.Drawing.Point(91, 275);
+            this.btnThemct.Location = new System.Drawing.Point(105, 296);
             this.btnThemct.Name = "btnThemct";
             this.btnThemct.Size = new System.Drawing.Size(140, 31);
             this.btnThemct.TabIndex = 4;
             this.btnThemct.Text = "Nhập chi tiết máy";
             this.btnThemct.Click += new System.EventHandler(this.btnThemct_Click);
             // 
+            // txtRam
+            // 
+            this.txtRam.Location = new System.Drawing.Point(189, 211);
+            this.txtRam.Name = "txtRam";
+            this.txtRam.ReadOnly = true;
+            this.txtRam.Size = new System.Drawing.Size(100, 21);
+            this.txtRam.TabIndex = 2;
+            // 
             // txtGia
             // 
-            this.txtGia.Location = new System.Drawing.Point(190, 119);
+            this.txtGia.Location = new System.Drawing.Point(190, 111);
             this.txtGia.Name = "txtGia";
             this.txtGia.ReadOnly = true;
             this.txtGia.Size = new System.Drawing.Size(100, 21);
@@ -295,7 +308,7 @@
             // 
             // txtTGBH
             // 
-            this.txtTGBH.Location = new System.Drawing.Point(189, 152);
+            this.txtTGBH.Location = new System.Drawing.Point(189, 144);
             this.txtTGBH.Name = "txtTGBH";
             this.txtTGBH.ReadOnly = true;
             this.txtTGBH.Size = new System.Drawing.Size(100, 21);
@@ -303,7 +316,7 @@
             // 
             // txtTenM
             // 
-            this.txtTenM.Location = new System.Drawing.Point(190, 84);
+            this.txtTenM.Location = new System.Drawing.Point(190, 76);
             this.txtTenM.Name = "txtTenM";
             this.txtTenM.ReadOnly = true;
             this.txtTenM.Size = new System.Drawing.Size(100, 21);
@@ -311,11 +324,21 @@
             // 
             // txtMaM
             // 
-            this.txtMaM.Location = new System.Drawing.Point(190, 55);
+            this.txtMaM.Location = new System.Drawing.Point(190, 47);
             this.txtMaM.Name = "txtMaM";
             this.txtMaM.ReadOnly = true;
             this.txtMaM.Size = new System.Drawing.Size(100, 21);
             this.txtMaM.TabIndex = 2;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.label5.Location = new System.Drawing.Point(135, 212);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(55, 23);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "RAM:";
             // 
             // cbbHangsx
             // 
@@ -323,7 +346,7 @@
             this.cbbHangsx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbHangsx.Enabled = false;
             this.cbbHangsx.FormattingEnabled = true;
-            this.cbbHangsx.Location = new System.Drawing.Point(191, 28);
+            this.cbbHangsx.Location = new System.Drawing.Point(191, 20);
             this.cbbHangsx.Name = "cbbHangsx";
             this.cbbHangsx.Size = new System.Drawing.Size(121, 21);
             this.cbbHangsx.TabIndex = 1;
@@ -332,7 +355,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label7.Location = new System.Drawing.Point(74, 185);
+            this.label7.Location = new System.Drawing.Point(74, 177);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(117, 23);
             this.label7.TabIndex = 0;
@@ -342,7 +365,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label6.Location = new System.Drawing.Point(9, 152);
+            this.label6.Location = new System.Drawing.Point(9, 144);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(181, 23);
             this.label6.TabIndex = 0;
@@ -352,7 +375,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label4.Location = new System.Drawing.Point(108, 117);
+            this.label4.Location = new System.Drawing.Point(108, 109);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(82, 23);
             this.label4.TabIndex = 0;
@@ -362,7 +385,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label3.Location = new System.Drawing.Point(101, 82);
+            this.label3.Location = new System.Drawing.Point(101, 74);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(90, 23);
             this.label3.TabIndex = 0;
@@ -372,7 +395,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label2.Location = new System.Drawing.Point(108, 53);
+            this.label2.Location = new System.Drawing.Point(108, 45);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 23);
             this.label2.TabIndex = 0;
@@ -382,7 +405,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label1.Location = new System.Drawing.Point(6, 26);
+            this.label1.Location = new System.Drawing.Point(6, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(186, 23);
             this.label1.TabIndex = 0;
@@ -396,7 +419,7 @@
             this.layoutControlItem1});
             this.layoutControlGroup1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(373, 558);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(373, 543);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem1
@@ -404,7 +427,7 @@
             this.layoutControlItem1.Control = this.groupBox1;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(353, 538);
+            this.layoutControlItem1.Size = new System.Drawing.Size(353, 523);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
             // 
@@ -415,7 +438,7 @@
             this.layoutControl2.Location = new System.Drawing.Point(373, 0);
             this.layoutControl2.Name = "layoutControl2";
             this.layoutControl2.Root = this.layoutControlGroup2;
-            this.layoutControl2.Size = new System.Drawing.Size(850, 558);
+            this.layoutControl2.Size = new System.Drawing.Size(850, 543);
             this.layoutControl2.TabIndex = 1;
             this.layoutControl2.Text = "layoutControl2";
             // 
@@ -430,19 +453,20 @@
             this.Gia,
             this.SoLuongTon,
             this.TGBH,
-            this.DungLuong});
+            this.DungLuong,
+            this.RAM});
             this.dgvHienLoaiM.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvHienLoaiM.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvHienLoaiM.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvHienLoaiM.Location = new System.Drawing.Point(12, 12);
             this.dgvHienLoaiM.Name = "dgvHienLoaiM";
-            this.dgvHienLoaiM.Size = new System.Drawing.Size(826, 534);
+            this.dgvHienLoaiM.Size = new System.Drawing.Size(826, 519);
             this.dgvHienLoaiM.TabIndex = 4;
             // 
             // MaM
@@ -508,6 +532,14 @@
             this.DungLuong.ReadOnly = true;
             this.DungLuong.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
+            // RAM
+            // 
+            this.RAM.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.RAM.DataPropertyName = "Ram";
+            this.RAM.HeaderText = "RAM";
+            this.RAM.Name = "RAM";
+            this.RAM.ReadOnly = true;
+            // 
             // layoutControlGroup2
             // 
             this.layoutControlGroup2.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -516,7 +548,7 @@
             this.layoutControlItem2});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "layoutControlGroup2";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(850, 558);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(850, 543);
             this.layoutControlGroup2.TextVisible = false;
             // 
             // layoutControlItem2
@@ -524,7 +556,7 @@
             this.layoutControlItem2.Control = this.dgvHienLoaiM;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(830, 538);
+            this.layoutControlItem2.Size = new System.Drawing.Size(830, 523);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -532,10 +564,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1223, 558);
+            this.ClientSize = new System.Drawing.Size(1223, 543);
             this.Controls.Add(this.layoutControl2);
             this.Controls.Add(this.layoutControl1);
-            this.LookAndFeel.SkinName = "Seven";
+            this.LookAndFeel.SkinName = "iMaginary";
             this.LookAndFeel.UseDefaultLookAndFeel = false;
             this.Name = "Frm_QLDT";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -594,6 +626,8 @@
         private System.Windows.Forms.Button btnThemDL;
         private System.Windows.Forms.ComboBox cbbMau;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtRam;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaM;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaH;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenM;
@@ -601,5 +635,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuongTon;
         private System.Windows.Forms.DataGridViewTextBoxColumn TGBH;
         private System.Windows.Forms.DataGridViewTextBoxColumn DungLuong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RAM;
     }
 }

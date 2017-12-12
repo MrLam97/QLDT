@@ -11,10 +11,11 @@ namespace DTO
         private string MaM;
         private string MaH;
         private string TenM;
-        private ulong Gia;
+        private string Gia;
         private int SoLuongTon;
         private int TGBH;
         private int DungLuong;
+        private int Ram;
 
         public string MaM1
         {
@@ -55,7 +56,7 @@ namespace DTO
             }
         }
 
-        public ulong Gia1
+        public string Gia1
         {
             get
             {
@@ -107,7 +108,20 @@ namespace DTO
             }
         }
 
-        public tblLoaiMay(string mam, string mah, string tenm, ulong gia, int soluongton, int tgbh, int dungluong)
+        public int Ram1
+        {
+            get
+            {
+                return Ram;
+            }
+
+            set
+            {
+                Ram = value;
+            }
+        }
+
+        public tblLoaiMay(string mam, string mah, string tenm, string gia, int soluongton, int tgbh, int dungluong,int ram)
         {
             MaM1 = mah;
             MaH1 = mah;
@@ -116,6 +130,7 @@ namespace DTO
             SoLuongTon1 = soluongton;
             TGBH1 = tgbh;
             DungLuong1 = dungluong;
+            Ram1 = ram;
         }
     }
 }

@@ -21,7 +21,7 @@ namespace QuanLyCHDT
 
             BonusSkins.Register();
             SkinManager.EnableFormSkins();
-            Application.Run(new Frm_QLyDT());
+            Application.Run(new FRM_Main());
         }
     }
 }

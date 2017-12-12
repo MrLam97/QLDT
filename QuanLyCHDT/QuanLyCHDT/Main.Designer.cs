@@ -62,6 +62,7 @@
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem2 = new DevExpress.XtraBars.BarSubItem();
             this.bbtnDangNhap = new DevExpress.XtraBars.BarButtonItem();
+            this.bbtnTraCuuMay = new DevExpress.XtraBars.BarButtonItem();
             this.rbpQLSP = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -76,9 +77,11 @@
             this.rbpThongKe = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.applicationMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControl1
@@ -115,9 +118,10 @@
             this.bbtnDangNhap1,
             this.bbtnDangKy,
             this.bbtnDoiPass,
-            this.bbtnDangXuat});
+            this.bbtnDangXuat,
+            this.bbtnTraCuuMay});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 40;
+            this.ribbonControl1.MaxItemId = 41;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.PageHeaderItemLinks.Add(this.bhiManv);
             this.ribbonControl1.PageHeaderItemLinks.Add(this.skinRibbonGalleryBarItem3);
@@ -353,6 +357,15 @@
             this.bbtnDangNhap.Id = 31;
             this.bbtnDangNhap.Name = "bbtnDangNhap";
             // 
+            // bbtnTraCuuMay
+            // 
+            this.bbtnTraCuuMay.Caption = "Quản lý sản phẩm";
+            this.bbtnTraCuuMay.Id = 40;
+            this.bbtnTraCuuMay.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bbtnTraCuuMay.ImageOptions.Image")));
+            this.bbtnTraCuuMay.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bbtnTraCuuMay.ImageOptions.LargeImage")));
+            this.bbtnTraCuuMay.Name = "bbtnTraCuuMay";
+            this.bbtnTraCuuMay.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnTraCuuMay_ItemClick);
+            // 
             // rbpQLSP
             // 
             this.rbpQLSP.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -377,6 +390,7 @@
             // 
             // ribbonPageGroup9
             // 
+            this.ribbonPageGroup9.ItemLinks.Add(this.bbtnTraCuuMay);
             this.ribbonPageGroup9.Name = "ribbonPageGroup9";
             this.ribbonPageGroup9.Text = "ribbonPageGroup9";
             // 
@@ -443,6 +457,13 @@
             this.ribbonPageGroup8.Name = "ribbonPageGroup8";
             this.ribbonPageGroup8.Text = "Số máy bán được trong tháng";
             // 
+            // xtraTabbedMdiManager1
+            // 
+            this.xtraTabbedMdiManager1.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InAllTabPageHeaders;
+            this.xtraTabbedMdiManager1.FloatOnDrag = DevExpress.Utils.DefaultBoolean.True;
+            this.xtraTabbedMdiManager1.FloatPageDragMode = DevExpress.XtraTabbedMdi.FloatPageDragMode.FullWindow;
+            this.xtraTabbedMdiManager1.MdiParent = this;
+            // 
             // FRM_Main
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
@@ -450,6 +471,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(758, 360);
             this.Controls.Add(this.ribbonControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.IsMdiContainer = true;
             this.Name = "FRM_Main";
             this.Ribbon = this.ribbonControl1;
@@ -462,6 +484,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.applicationMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -515,6 +538,8 @@
         private DevExpress.XtraBars.BarButtonItem bbtnDangKy;
         private DevExpress.XtraBars.BarButtonItem bbtnDoiPass;
         private DevExpress.XtraBars.BarButtonItem bbtnDangXuat;
+        private DevExpress.XtraBars.BarButtonItem bbtnTraCuuMay;
+        private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
     }
 }
 

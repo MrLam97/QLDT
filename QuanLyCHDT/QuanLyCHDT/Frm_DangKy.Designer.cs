@@ -44,6 +44,9 @@
             // 
             // txtPass
             // 
+            this.txtPass.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPass.Location = new System.Drawing.Point(269, 79);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(155, 21);
@@ -52,6 +55,9 @@
             // 
             // txtID
             // 
+            this.txtID.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtID.Location = new System.Drawing.Point(269, 39);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(155, 21);
@@ -59,6 +65,9 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 14F);
             this.label2.Location = new System.Drawing.Point(168, 79);
@@ -69,6 +78,9 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 14F);
             this.label1.Location = new System.Drawing.Point(116, 37);
@@ -79,6 +91,9 @@
             // 
             // txtSDT
             // 
+            this.txtSDT.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSDT.Location = new System.Drawing.Point(269, 203);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(155, 21);
@@ -86,6 +101,9 @@
             // 
             // txtTen
             // 
+            this.txtTen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTen.Location = new System.Drawing.Point(269, 163);
             this.txtTen.Name = "txtTen";
             this.txtTen.Size = new System.Drawing.Size(155, 21);
@@ -93,6 +111,9 @@
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 14F);
             this.label3.Location = new System.Drawing.Point(136, 203);
@@ -103,6 +124,9 @@
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 14F);
             this.label4.Location = new System.Drawing.Point(110, 161);
@@ -113,6 +137,9 @@
             // 
             // btnDangKy
             // 
+            this.btnDangKy.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDangKy.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.btnDangKy.Appearance.Options.UseFont = true;
             this.btnDangKy.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
@@ -126,6 +153,9 @@
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 14F);
             this.label5.Location = new System.Drawing.Point(92, 119);
@@ -136,6 +166,9 @@
             // 
             // txtNhapLai
             // 
+            this.txtNhapLai.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNhapLai.Location = new System.Drawing.Point(269, 119);
             this.txtNhapLai.Name = "txtNhapLai";
             this.txtNhapLai.Size = new System.Drawing.Size(155, 21);
@@ -145,6 +178,9 @@
             // 
             // lblNhapLai
             // 
+            this.lblNhapLai.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNhapLai.AutoSize = true;
             this.lblNhapLai.ForeColor = System.Drawing.Color.Red;
             this.lblNhapLai.Location = new System.Drawing.Point(269, 143);
@@ -170,7 +206,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.LookAndFeel.SkinName = "Seven";
+            this.LookAndFeel.SkinName = "iMaginary";
             this.Name = "Frm_DangKy";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_DangKy";

@@ -1,7 +1,7 @@
-﻿use QLCHDT
+﻿use QLDienThoai
 go
 ------------------------Thêm hãng sản xuất
-alter proc ThemHangSX
+create proc ThemHangSX
 @MaH nvarchar(20),
 @TenH nvarchar(20)
 as
@@ -10,7 +10,7 @@ insert into HangSX values(@MaH,@TenH)
 end
 go
 ------------------------Xuất hãng sản xuất
-alter proc HienHangSX
+create proc HienHangSX
 as
 begin
 select * from HangSX
@@ -49,13 +49,14 @@ create proc NhapMay
 @MaM nvarchar(20),
 @MaH nvarchar(20),
 @TenM nvarchar(20),
-@Gia money,
+@Gia char(255),
 @SoLuongTon int,
 @TGBH int,
-@DungLuong int
+@DungLuong int,
+@Ram int
 as
 begin
-insert into LoaiMay values(@MaM,@MaH,@TenM,@Gia,@SoLuongTon,@TGBH,@DungLuong)
+insert into LoaiMay values(@MaM,@MaH,@TenM,@Gia,@SoLuongTon,@TGBH,@DungLuong,@Ram)
 end
 go
 -------------------------xuất máy
@@ -77,7 +78,7 @@ insert into ChiTietMay values(@Imei,@MaM,@Mau,@DaBan)
 end
 go
 --------------------------Nhập số lượng tồn
-alter proc SoLuongTon
+create proc SoLuongTon
 @MaM nvarchar(20)
 as
 begin
@@ -108,14 +109,17 @@ select distinct Mau from ChiTietMay
 end
 go
 --------------------------Thêm nhân viên
-alter proc ThemNV
+create proc ThemNV
 @MaNV nvarchar(20),
 @TenNV nvarchar(50),
 @PassNV nvarchar(20),
-@SDTNV nvarchar(12)
+@SDTNV nvarchar(12),
+@Boss bit,
+@QuanLy bit,
+@NhanVien bit
 as
 begin
-insert into NhanVien values(@MaNV,@TenNV,@PassNV,@SDTNV)
+insert into NhanVien values(@MaNV,@TenNV,@PassNV,@SDTNV,@Boss,@QuanLy,@NhanVien)
 end
 go
 -------------------------Đổi mật khẩu nhân viên

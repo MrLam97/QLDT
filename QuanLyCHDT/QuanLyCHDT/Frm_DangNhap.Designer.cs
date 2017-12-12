@@ -38,6 +38,9 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 14F);
             this.label1.Location = new System.Drawing.Point(84, 98);
@@ -48,6 +51,9 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 14F);
             this.label2.Location = new System.Drawing.Point(136, 140);
@@ -58,6 +64,9 @@
             // 
             // cbHienMK
             // 
+            this.cbHienMK.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cbHienMK.AutoSize = true;
             this.cbHienMK.Location = new System.Drawing.Point(298, 179);
             this.cbHienMK.Name = "cbHienMK";
@@ -69,6 +78,9 @@
             // 
             // btnDangNhap
             // 
+            this.btnDangNhap.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDangNhap.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
             this.btnDangNhap.Appearance.Options.UseFont = true;
             this.btnDangNhap.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
@@ -82,6 +94,9 @@
             // 
             // txtID
             // 
+            this.txtID.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtID.Location = new System.Drawing.Point(237, 100);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(155, 21);
@@ -89,6 +104,9 @@
             // 
             // txtPass
             // 
+            this.txtPass.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPass.Location = new System.Drawing.Point(237, 140);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(155, 21);
@@ -107,7 +125,7 @@
             this.Controls.Add(this.cbHienMK);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.LookAndFeel.SkinName = "Seven";
+            this.LookAndFeel.SkinName = "iMaginary";
             this.Name = "Frm_DangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_DangNhap";

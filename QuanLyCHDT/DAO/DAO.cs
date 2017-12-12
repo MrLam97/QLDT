@@ -14,10 +14,11 @@ namespace DAO
     {
         public static SqlConnection Hamketnoi()
         {
-            SqlConnection Conn = new SqlConnection("Data Source=MRLAM-PC\\SQLEXPRESS;Initial Catalog=QLCHDT;Integrated Security=True");
+            SqlConnection Conn = new SqlConnection("Data Source=MRLAM-PC\\SQLEXPRESS;Initial Catalog=QLDienThoai;Integrated Security=True");
             return Conn;
         }
     }
+
     public class tblHangsx_DAO
     {
         public static bool Kiemtrakhoachinh(string _text, string _text1)
@@ -124,10 +125,11 @@ namespace DAO
             cmd.Parameters.Add("@MaM", SqlDbType.NVarChar, 20);
             cmd.Parameters.Add("@MaH", SqlDbType.NVarChar, 20);
             cmd.Parameters.Add("@TenM", SqlDbType.NVarChar, 20);
-            cmd.Parameters.Add("@Gia", SqlDbType.Money);
+            cmd.Parameters.Add("@Gia", SqlDbType.Char,255);
             cmd.Parameters.Add("@SoLuongTon", SqlDbType.Int);
             cmd.Parameters.Add("@TGBH", SqlDbType.Int);
             cmd.Parameters.Add("@DungLuong", SqlDbType.Int);
+            cmd.Parameters.Add("@Ram", SqlDbType.Int);
 
             cmd.Parameters["@MaM"].Value = lm.MaM1;
             cmd.Parameters["@MaH"].Value = lm.MaH1;
@@ -136,6 +138,7 @@ namespace DAO
             cmd.Parameters["@SoLuongTon"].Value = lm.SoLuongTon1;
             cmd.Parameters["@TGBH"].Value = lm.TGBH1;
             cmd.Parameters["@DungLuong"].Value = lm.DungLuong1;
+            cmd.Parameters["@Ram"].Value = lm.Ram1;
 
             conn.Open();
             cmd.ExecuteNonQuery();

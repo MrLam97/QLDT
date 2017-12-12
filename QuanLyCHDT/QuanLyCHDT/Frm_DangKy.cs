@@ -37,6 +37,7 @@ namespace QuanLyCHDT
                         MessageBox.Show("Đăng ký thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         txtID.Text = "";
                         txtPass.Text = "";
+                        txtNhapLai.Text = "";
                         txtTen.Text = "";
                         txtSDT.Text = "";
                     }
