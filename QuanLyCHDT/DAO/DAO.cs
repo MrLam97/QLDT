@@ -14,7 +14,7 @@ namespace DAO
     {
         public static SqlConnection Hamketnoi()
         {
-            SqlConnection Conn = new SqlConnection("Data Source=MRLAM-PC\\SQLEXPRESS;Initial Catalog=QLCHDT;Integrated Security=True");
+            SqlConnection Conn = new SqlConnection("Data Source=DESKTOP-1P5PM5F\\SQLEXPRESS;Initial Catalog=QLCHDT;Integrated Security=True");
             return Conn;
         }
     }

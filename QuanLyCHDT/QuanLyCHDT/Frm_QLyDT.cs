@@ -14,7 +14,7 @@ using BUS;
 namespace QuanLyCHDT
 {
     public partial class Frm_QLyDT : DevExpress.XtraEditors.XtraForm
-    {
+    {//Chinh sua
         public Frm_QLyDT()
         {
             InitializeComponent();
